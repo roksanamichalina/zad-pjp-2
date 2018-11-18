@@ -1,0 +1,187 @@
+#Zadanie 1
+def podzielneprzez7inieprzez5(x,y):
+    for i in range(x,y+1):
+        if i%7 == 0 and i%5 != 0:
+            print(i)
+podzielneprzez7inieprzez5(1, 100)            
+
+
+
+#Zadanie 2
+def silnia(x):
+    silnia = 1
+    if x == 0 or x == 1:
+        silnia = 1
+    else:
+        for i in range(1, x+1):
+            silnia = silnia * i
+    print(silnia)
+silnia(9)
+
+
+
+#Zadanie 3
+def listaikrotka(a):
+    l = a.split(",")
+    k = tuple(l)
+    print(k)
+    print(l)
+listaikrotka("2,5,2,6,7,2,56,6")
+
+
+
+
+#Zadanie 4
+def zrobzdanie(wyraz1, wyraz2, wyraz3, wyraz4):
+    zdanie = wyraz1.capitalize() + ' ' + wyraz2 + ' ' + wyraz3 + ' ' + wyraz4 + '.'
+    print(zdanie)
+zrobzdanie("ala", "ma", "czarnego", "kota")
+
+
+
+
+#Zadanie 5
+def testwieku(x):
+    if x in range(0,2):
+        print(x, "to noworodek")
+    elif x in range(2, 11):
+        print(x, "to dziecko")
+    elif x in range(11, 18):
+        print(x, "to nastolatek")
+    else:
+        print(x, "to dorosły")
+testwieku(11)
+
+
+
+
+#Zadanie 6
+def srednia(x):
+    srednia = sum(x)/len(x)
+    return srednia
+srednia([2,5,3,4,2,5,1,3,4])
+
+
+
+
+#Zadanie 7
+def ocena(a):
+    if a > 91:
+        print("otrzymałeś ocenę bardzo dobrą")
+    if 90 > a > 76:
+        print("otrzymałeś ocenę dobrą")
+    if 75 > a > 51:
+        print("otrzymałeś ocenę dopuszczającą")
+    else:
+        print("przykro mi, zapraszam we wrześniu")
+ ocena(83)
+ 
+ 
+ 
+ 
+ 
+ #Zadanie 8
+ def daty_urodzenia(a):
+
+    lista=[]
+
+    for i in range(len(a)):
+
+        lista.append(2018-a[i])
+
+    print(lista)
+
+
+daty_urodzenia([21,34,25,64,53,74,52,35])
+
+
+
+ 
+ #Zadanie 9
+ def czypalindrom(zdanie):
+
+    zdaniezmałych=zdanie.lower()
+
+    b = list(zdaniezmałych)
+
+    while b.count(' ') > 0 :
+
+        b.remove(' ')
+
+    while b.count('.') > 0 :
+
+        b.remove('.')
+
+    while b.count(',') > 0 :
+
+        b.remove(',')
+
+    while b.count('!') > 0 :
+
+        b.remove('!')
+
+    while b.count('?') > 0 :
+
+        b.remove('?')
+
+    litery=''.join(b)
+
+    if litery==litery[::-1]:
+
+        print("zdanie \"",zdanie,"\" jest palindromem.")
+
+    else:
+
+        print("Zdanie \"",zdanie,"\" nie jest palindromem.")
+
+        
+czypalindrom('Jestem super')
+
+
+
+
+
+
+ #Zadanie 10
+ def zwroclisty(a):
+
+    i=0
+
+    while i<len(a):
+
+        b=[a[i]]
+
+        print(b)
+
+        i+=1
+
+
+
+zwroclisty([3,5])
+ 
+ 
+ 
+ 
+ #Zadanie 11
+ from math import pi
+ def pro(a,b,c):
+
+     print("Powierzchnia prostopadłościanu o bokach",a,b,c,"wynosi",2*((a*b)+(a*c)+(b*c)),"a jego objętość",a*b*c)
+
+    
+ pro(2,5,7)
+
+ def walec(r,h):
+
+     print("Powierzchnia walca o promieniu",r,"i wysokośći",h,"wynosi",(2*(r**2)*pi)+(2*pi*r*h),",a jego objętość",(r**2)*pi*h)
+
+ walec(2,5)
+ 
+ 
+ 
+ #Zadanie 12
+ def alfabetyczniebezpowtorzen(a):
+    words = a.split(" ")
+    words = sorted(list(set(words)))
+    print(" ".join(words))
+ alfabetyczniebezpowtorzen("nie było jeszcze żadnego krzewu polnego na ziemi ani żadna trawa polna jeszcze nie wzeszła i nie było człowieka by uprawiał ziemię")
